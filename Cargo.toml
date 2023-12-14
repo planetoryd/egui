@@ -57,3 +57,6 @@ wgpu = { version = "0.18.0", features = ["fragile-send-sync-non-atomic-wasm"] }
 
 # Use this to build wgpu with WebGL support on the Web *instead* of using WebGPU.
 #wgpu = { version = "0.18.0", features = ["webgl"] }
+
+[patch.crates-io]
+winit = { path = "../winit" }
