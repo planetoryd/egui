@@ -626,6 +626,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "block2"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e58aa60e59d8dbfcc36138f5f18be5f24394d33b38b24f7fd0b1caa33095f22f"
+dependencies = [
+ "block-sys 0.2.0",
+ "objc2 0.5.0",
+]
+
+[[package]]
 name = "blocking"
 version = "1.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1098,7 +1108,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e16e44ab292b1dddfdaf7be62cfd8877df52f2f3fde5858d95bab606be259f20"
 dependencies = [
  "bitflags 2.4.1",
- "libloading 0.8.1",
+ "libloading 0.7.4",
  "winapi",
 ]
 
@@ -1171,7 +1181,7 @@ version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "330c60081dcc4c72131f8eb70510f1ac07223e5d4163db481a04a0befcffa412"
 dependencies = [
- "libloading 0.8.1",
+ "libloading 0.7.4",
 ]
 
 [[package]]
@@ -1881,7 +1891,7 @@ dependencies = [
  "glutin_egl_sys",
  "glutin_glx_sys",
  "glutin_wgl_sys",
- "icrate",
+ "icrate 0.0.4",
  "libloading 0.8.1",
  "objc2 0.4.1",
  "once_cell",
@@ -2156,6 +2166,17 @@ dependencies = [
  "block2 0.3.0",
  "dispatch",
  "objc2 0.4.1",
+]
+
+[[package]]
+name = "icrate"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e286f4b975ac6c054971a0600a9b76438b332edace54bff79c71c9d3adfc9772"
+dependencies = [
+ "block2 0.4.0",
+ "dispatch",
+ "objc2 0.5.0",
 ]
 
 [[package]]
@@ -2674,7 +2695,7 @@ version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6c11e44798ad209ccdd91fc192f0526a369a01234f7373e1b141c96d7cee4f0e"
 dependencies = [
- "proc-macro-crate 2.0.1",
+ "proc-macro-crate",
  "proc-macro2",
  "quote",
  "syn 2.0.41",
@@ -2735,6 +2756,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "objc2"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9a9c7f0d511a4ce26b078183179dca908171cfc69f88986fe36c5138e1834476"
+dependencies = [
+ "objc-sys 0.3.2",
+ "objc2-encode 4.0.0",
+]
+
+[[package]]
 name = "objc2-encode"
 version = "2.0.0-pre.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2748,6 +2779,12 @@ name = "objc2-encode"
 version = "3.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d079845b37af429bfe5dfa76e6d087d788031045b25cfc6fd898486fd9847666"
+
+[[package]]
+name = "objc2-encode"
+version = "4.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2ff06a6505cde0766484f38d8479ac8e6d31c66fbc2d5492f65ca8c091456379"
 
 [[package]]
 name = "objc_exception"
@@ -3009,16 +3046,6 @@ checksum = "7f4c021e1093a56626774e81216a4ce732a735e5bad4868a03f3ed65ca0c3919"
 dependencies = [
  "once_cell",
  "toml_edit 0.19.15",
-]
-
-[[package]]
-name = "proc-macro-crate"
-version = "2.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "97dc5fea232fc28d2f597b37c4876b348a40e33f3b02cc975c8d006d78d94b1a"
-dependencies = [
- "toml_datetime",
- "toml_edit 0.20.2",
 ]
 
 [[package]]
@@ -4449,7 +4476,7 @@ dependencies = [
  "js-sys",
  "khronos-egl",
  "libc",
- "libloading 0.8.1",
+ "libloading 0.7.4",
  "log",
  "metal",
  "naga",
@@ -4787,7 +4814,7 @@ checksum = "dff9641d1cd4be8d1a070daf9e3773c5f67e78b4d9d42263020c057706765c04"
 
 [[package]]
 name = "winit"
-version = "0.29.4"
+version = "0.29.7"
 dependencies = [
  "ahash",
  "android-activity",
@@ -4799,14 +4826,14 @@ dependencies = [
  "core-foundation",
  "core-graphics",
  "cursor-icon",
- "icrate",
+ "icrate 0.1.0",
  "js-sys",
  "libc",
  "log",
  "memmap2",
  "ndk",
  "ndk-sys",
- "objc2 0.4.1",
+ "objc2 0.5.0",
  "once_cell",
  "orbclient",
  "percent-encoding",
@@ -4998,7 +5025,7 @@ version = "3.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "41d1794a946878c0e807f55a397187c11fc7a038ba5d868e7db4f3bd7760bc9d"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate",
  "proc-macro2",
  "quote",
  "regex",
@@ -5057,7 +5084,7 @@ version = "3.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "934d7a7dfc310d6ee06c87ffe88ef4eca7d3e37bb251dece2ef93da8f17d8ecd"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate",
  "proc-macro2",
  "quote",
  "syn 1.0.109",
